@@ -52,7 +52,7 @@ ZEND_END_MODULE_GLOBALS(json)
 PHP_JSON_API void php_json_encode(smart_str *buf, zval *val, int options TSRMLS_DC);
 PHP_JSON_API void php_json_decode_ex(zval *return_value, char *str, int str_len, int options, long depth TSRMLS_DC);
 extern zend_class_entry *php_json_serializable_ce;
-
+PHP_JSON_API zend_class_entry *php_json_get_serializeable_ce(void);
 
 /* json_encode() options */
 #define PHP_JSON_HEX_TAG	(1<<0)

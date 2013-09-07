@@ -167,6 +167,11 @@ static PHP_MINFO_FUNCTION(json)
 }
 /* }}} */
 
+PHP_JSON_API zend_class_entry *php_json_get_serializeable_ce(void)
+{
+	return php_json_serializable_ce;
+}
+
 static void json_escape_string(smart_str *buf, char *s, int len, int options TSRMLS_DC);
 
 static int json_determine_array_type(zval **val TSRMLS_DC) /* {{{ */
